@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+/* font-family: 'Manrope', sans-serif; */
+/* font-weight: 700; */
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #EDF2F8;
+  font-family: 'Manrope', sans-serif;
+  /* agar content diletakkan ditengah */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* untuk pembungkus utama */
+.card{
+  width: 728px;
+  height: 280px;
+  /* untuk memberi lingkaran pada setiap sudut */
+  border-radius: 12px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  /* unutuk memberikan efek bayangan secara vertical */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 8%);
+}
+
+/* untuk bagian image */
+.card-img{
+  width: auto;
+  height: 100%; 
+}
+
+/* untuk mengubah foto sesuai ukuran device */
+.image_full{
+  display:block;
+}
+.image_mobile{
+  display:none;
+}
+
+/* untuk bagian body */
+.card-body{
+  display: flex;
+  flex-direction: column;
+  padding: 33px 0px 33px 38px;
+}
+
+/* untuk judul dari card dengan h1 */
+.card-title{
+  padding-right: 56px;
+}
+.card-title h1{
+  color: #484F59;
+  margin: 0 0 9px 0;
+  font-size: 20px;
+  font-weight: 500;
+  word-spacing: 0.1px;
+  letter-spacing: 0.1px;
+}
+
+/* untuk penjesalan lengkap dengan tag p */
+.card-text{
+  padding-right: 41px;
+}
+.card-text p{
+  color: #879AB0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* untuk footer card */
+.footer-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 39px;
+  padding-right: 41px;
+  position: relative;
+}
+
+/* untuk avatar dalam nya image */
+.avatar{
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+/* untuk avatar nama */
+.avatar-name{
+  padding-left: 17px;
+}
+.avatar-name h3,
+.avatar-name p{
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+.avatar-name h3{
+  color: #6C7682;
+}
+.avatar-name p{
+  color: #6C7682;
+  font-weight: 500;
+}
+
+/* untuk button share */
+.share{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 100px;
+  background-color: #F4F7FD;
+}
+
+/* untuk warna icon */
+.share i{
+  color: #879AB0;
+}
+
+/* untuk bagian text */
+.share .tooltip-share .tooltip-text-share{
+  padding: 0 16px 0 37px; 
+}
+.share .tooltip-share .tooltip-text-share p{
+  color: #879AB0;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+/* untuk bagian sosmed-share */
+.tooltip-sosmed-share i{
+  color: #fff;
+  margin-right: 16px;
+}
+div.share{
+  display: none;
+}
+span.mobile-space{
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 751px){
+  /* untuk menu tooltip */
+.share .tooltip-share{
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 248px;
+  height: 55px;
+  border-radius: 6px;
+  margin-left: -128px;
+  background-color: #49556B;
+  box-shadow:  0 13px 18px rgba(0, 0, 0, 16%);
+  position: absolute;
+  bottom: 170%;
+  left: 50%;
+  z-index: 1;
+}
+.share .tooltip-share::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #49556B transparent transparent transparent;
+  }
+
+  /* untuk event class active */
+  .share.active i{
+    color: white;
+  }
+  .share.active{
+    background-color: #879AB0;
+  }
+  .share.active .tooltip-share{
+    visibility: visible;
+  }
+}
+
+/* for phone */
+@media (max-width: 750px){
+
+    /* untuk pembungkus utama */
+  .card{
+    max-width: 87%;
+    height: auto;
+    /* untuk memberi lingkaran pada setiap sudut */
+    border-radius: 12px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* unutuk memberikan efek bayangan secara vertical */
+    box-shadow: 0 28px 20px rgba(0, 0, 0, 8%);
+  }
+
+  /* untuk bagian image */
+  .card .card-img{
+    min-width: 90%;
+    height: auto;
+  }
+
+  .image_full{
+    display:none;
+  }
+
+  .image_mobile{
+    display:block;
+  }
+
+  /* untuk bagian body */
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    min-width: 90%;
+    height: auto;
+    padding: 37px 0px 11px 34px;
+  }
+
+  /* untuk judul dari card dengan h1 */
+  .card-title{
+    padding: 0px 35px 0px 0px;
+  }
+  .card-title h1{
+    font-size: 16px;
+    color: #484F59;
+    margin: 0 0 9px 0;
+    font-weight: 500;
+    word-spacing: 0.1px;
+    letter-spacing: 0.1px;
+  }
+
+  /* untuk penjesalan lengkap dengan tag p */
+  .card-text{
+    padding-right: 38px;
+  }
+  .card-text p{
+    color: #879AB0;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 6px;
+    margin-bottom: 27px;
+  }
+
+  /* untuk footer card */
+  .footer-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 39px;
+    width: 90%;
+    padding-right: 32px;
+  }
+
+  /* untuk avatar dalam nya image */
+  .avatar{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 171px;
+    height: 39px;
+  }
+
+  /* untuk avatar nama */
+  .avatar-name{
+    padding-left: 17px;
+  }
+  .avatar-name h3,
+  .avatar-name p{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+  .avatar-name h3{
+    color: #6C7682;
+  }
+  .avatar-name p{
+    color: #6C7682;
+    font-weight: 500;
+  }
+
+  /* untuk button share */
+  .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31px;
+    width: 31px;
+    border-radius: 100px;
+    background-color: #F4F7FD;
+    z-index: 2;
+    /* position: relative; */
+  }
+
+  .share .tooltip-share{
+    visibility: hidden;
+    position: absolute;
+    bottom: -50%;
+    right: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#49556B;
+    height: 65px;
+    width: 327px;
+    z-index: 1000;
+    border-radius: 0 0 12px 12px;
+  }
+  .tooltip-sosmed-share{
+    display: flex;
+    flex-direction: row;
+  }
+  .share.active .tooltip-share{
+    visibility: visible;
+  }
+  .tooltip-text-share p{
+    font-size: 13;
+  }
+  div.share{
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    background-color: #879AB0;
+  }
+  div.share i{
+    color: white;
+  }
+}
