@@ -221,6 +221,10 @@ span.mobile-space{
   .image_mobile{
     display:block;
   }
+  img.image_mobile{
+    width: 100%;
+    height: auto;
+  }
 
   /* untuk bagian body */
   .card-body{
@@ -304,7 +308,7 @@ span.mobile-space{
     border-radius: 100px;
     background-color: #F4F7FD;
     z-index: 2;
-    /* position: relative; */
+    position: relative;
   }
 
   .share .tooltip-share{
@@ -317,7 +321,7 @@ span.mobile-space{
     justify-content: space-between;
     background-color:#49556B;
     height: 65px;
-    width: 327px;
+    max-width: 1050%;
     z-index: 1000;
     border-radius: 0 0 12px 12px;
   }
